@@ -1,2 +1,4 @@
 # lagou
-imitate lagou
+* 该webApp项目基于AngularJS框架，仿lg开发一个招聘类的移动端单页应用；
+* 包括登录、注册、搜索、查看、收藏等功能；
+* 该项目开发技术涵盖指令、数据绑定、过滤器等AngularJS框架最常用的方法；
