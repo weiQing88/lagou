@@ -1,0 +1,5 @@
+<div class="head clearfix">
+  <span class="text fl">私人定制</span>
+  <button ng-if="!name" type="button" class="login fr" ui-sref="login">去登录</button>	
+  <button ng-if="name" type="button" class="login fr"  ng-bind="name?name:''"></button>	
+</div>

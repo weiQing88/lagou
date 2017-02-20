@@ -1,0 +1,20 @@
+<div class="login-wrapper">
+   <form name="loginForm">
+
+    <div class="form-line clearfix">
+    	 <span class="acount-icon fl"></span>
+    	 <input type="text" message-id="lg-name-msg" validator="phone" ng-model="user.name"  placeholder="输入手机号">
+         <p id="lg-name-msg"></p>
+    </div>
+
+   	<div class="form-line clearfix">
+   		<span class="lock-icon fl"></span>
+	 	<input type="password" message-id="lg-pw-msg" ng-model="user.pw" validator="password" placeholder="输入密码">
+     <p id="lg-pw-msg"></p> 
+   	</div>
+
+   	  <button type="button" class="login-btn" validation-submit="loginForm" ng-click="login();">登录</button>
+   	  <button type="button" class="registry-btn" ui-sref="registry">注册</button>
+
+   </form>  
+</div>

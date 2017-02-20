@@ -1,0 +1,21 @@
+<div class="position-class"> 
+  <h5>职位分类：</h5>
+<!-- 
+  这里的 class 还可以用 ng-class
+  ng-class="{true:'actived',false:''}[isActived]"
+  或者
+  $scope.isActived = 'actived'
+  class="{{isActived}}"
+   -->
+
+  <!--  $index 来自 ng-repeat 循环 -->
+  <button ng-click="showPositionList($index)" class="{{$index === isActived?'actived':''}}" type="button" ng-repeat="cls in com.positionClass" ng-bind="cls.name"></button>
+
+  <ul>
+  	<li class="clearfix" ng-repeat="pos in positionList">  <!-- positionList 来自 $scope.positionClass  -->
+  	  <P ng-bind="pos.name">web前端开发</P>
+  	  	<P ng-bind="pos.createdDate">2017-01-60 11：23</P>
+  	  	<span ng-bind="pos.salary">10k-13K</span>	 
+  	</li>
+  </ul>
+</div>

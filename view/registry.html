@@ -1,0 +1,34 @@
+<div class="registry">
+   <form name="registryForm">
+
+    <div class="form-line clearfix">
+    	 <span class="acount-icon fl"></span>
+    	 <input type="text" ng-model="user.phone" message-id="reg-phone-msg" validator="phone" placeholder="输入手机号">
+       <p id="reg-phone-msg"></p>
+    </div>
+
+   	<div class="form-line clearfix">
+   		<span class="lock-icon fl"></span>
+	 	  <input type="password" message-id="reg-pw-msg" ng-model="user.password1" validator="password" placeholder="输入密码">
+      <p id="reg-pw-msg"></p>
+   	</div>
+
+    <div class="form-line clearfix" style="border: none;">
+      <span class="lock-icon fl"></span>
+      <input type="password" message-id="reg-pw2-msg" ng-model="user.password2" validator="conformpw" placeholder="确认密码">
+      <p id="reg-pw2-msg"></p>
+    </div>
+
+
+   	<div class="sendMsg clearfix">
+   		<input type="text" placeholder="短信验证码" validator="sm" ng-model="user.sm" message-id="reg-sm-msg" class="fl">
+   		<label class="fr {{time?'disabled':''}}" ng-bind="time?time:'发送短信'" ng-click="time?1==1:send();"></label>
+       <p id="reg-sm-msg" style="clear: both;"></p>
+   	</div>
+
+       <button type="button" class="registry-btn" ng-click="registry()" validation-submit="registryForm" >注册</button>
+   	  <button type="button" class="login-btn" ui-sref="login">登录</button>
+   	
+
+   </form>  
+</div>

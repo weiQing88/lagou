@@ -1,0 +1,15 @@
+<div class="me" ng-if="haslogin">
+ <img ng-src="{{img}}" alt="">
+ <span ng-bind="name"></span>
+	<button type="button" class="me-btn-td" ui-sref="post">投递</button>
+   <button type="button" class="me-btn-s" ui-sref="favorite">收藏</button>
+  <button type="button" class="me-btn-t" ng-click="logout();">退出</button>
+</div>
+
+<div class="me" ng-if="!haslogin">
+     <h4>还没登录喔！！</h4>
+   <button class="go-login" ui-sref="login">去登录</button>
+</div>
+
+
+<div app-footer></div>

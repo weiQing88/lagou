@@ -1,0 +1,12 @@
+<div class="position-info">
+	<p>
+	  <span ng-bind="pos.name"></span><span class="colorRed" ng-bind="pos.salaryName"></span>	 
+	</p>
+	<p>
+	  <span ng-bind="pos.cityName"></span>
+	  <span ng-bind="pos.experience"></span>
+	  <span ng-bind="pos.education"></span>	
+	</p>
+	<p><span ng-bind="pos.benefit"></span></p>
+	<img ng-src="{{imgPath}}" alt="" ng-click="fav()" ng-show="isLogin" />
+</div>

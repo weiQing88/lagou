@@ -1,0 +1,18 @@
+<ul class="position-list">
+   <!--  
+
+   路由 position({id:item.id}) 以函数的形式传参数 
+
+   filterId 过滤条件来自 searchCtrl 控制器
+
+   -->
+	<li ui-sref="position({id:item.id})" class="item clearfix" ng-repeat="item in data|filterList:filterId">
+		<img ng-src="{{item.imageUrl}}" alt="" class="logo fl" />
+		<h3 class="title" ng-bind="item.job + ' - ' + item.cityName"></h3>
+		<p class="text" ng-bind="item.companyName +' / ' + item.salaryName + ' / '+item.scaleName"></p>
+		<p class="text" ng-bind="item.date"></p>
+
+		<!-- 这里需要用 $event.stopPropagation()处理事件冒泡 -->
+		<img ng-if="name" ng-click="$event.stopPropagation();selected(item)" ng-src="./imgs/{{item.select?'star-active.png':'star.png'}}" alt="" class="selectedStar" />
+	</li>
+</ul>					

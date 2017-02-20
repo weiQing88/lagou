@@ -1,0 +1,12 @@
+<div class="search clearfix">
+	<button type="button" ng-click="name=''; search();">取消</button>
+	<input ng-model="name" type="text" name="" />
+	<button type="button" gn-click="search();">
+	<img src="imgs/search.png" alt="" />
+	 搜索
+	</button>
+</div>
+<div app-search-tab list="tabList" t-click="tabcback(id,name);"></div>
+<div app-position-list data="positionList" filter-id="filterId"></div>
+<div app-sheet list="sheet.list" visible="sheet.visible" selected="sClick(id,name)"></div>
+<div app-footer></div>
